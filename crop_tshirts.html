@@ -1,0 +1,353 @@
+<html>
+	<head>
+		<meta charset = "UTF-8">
+			<title> VS Aura </title>
+		<link rel = "stylesheet" type="text/css" href="style.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	</head>
+
+	<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<img src="PNG/Secondary Logo PNG.png" id="logoimg">
+			</div>
+			<div id="navigationbar">
+				<nav id="nav">
+					<a href="index.html">Home</a>
+					<a href="t-shirt.html">T-Shirt's</a>
+					<a href="Merchandise.html">Merchandise</a>
+					<a href="crop_tshirts.html">Crop T-shirt's</a>
+				        <a href="about.html">About Us</a>
+					<a href="login.html">Login</a>
+				</nav>
+                                <div class="nav-icons">
+                                     <div class="search-container">
+                                          <i class="fas fa-search" onclick="toggleSearch()"></i>
+                                          <input type="text" id="searchInput" placeholder="Search...">
+                                     </div>
+
+                                     <i class="fas fa-shopping-cart" onclick="toggleCart()"></i>
+                                     <a href="login.html"><i class="fas fa-user"></i></a>
+                                </div>     
+			</div>
+                </div>
+	</header>
+    <section class="product-crop-t-shirt">
+         <h2>Women's Crop T-shirt</h2>
+    </section>
+
+    <section class="products">
+
+    <div class="product-card">
+        <img src="png/Crop T-shirt Black 02.png">
+        <h4>Black Crop T-shirt</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Black Crop T-shirt', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop T-shirt White 01.png">
+        <h4>White Crop T-shirt</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('White Crop T-shirt', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop T-shirt Olive Green 01.png">
+        <h4>Olive Green Crop T-shirt</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Olive Green Crop T-shirt', 1800)">Add to Cart</button>
+    </div>
+
+   </section>
+
+    <section class="products">
+
+    <div class="product-card">
+        <img src="png/Crop T-shirt Black 03.png">
+        <h4>Black Crop T-shirt</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Black Crop T-shirt', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop T-shirt White 02.png">
+        <h4>White Crop T-shirt</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('White Crop T-shirt', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop T-shirt Olive Green 02.png">
+        <h4>Olive Green Crop T-shirt</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Olive Green Crop T-shirt', 1800)">Add to Cart</button>
+    </div>
+
+   </section>
+
+    <section class="products">
+
+    <div class="product-card">
+        <img src="png/Crop T-shirt Black 04.png">
+        <h4>Black Crop T-shirt</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Black Crop T-shirt', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop T-shirt White 03.png">
+        <h4>White Crop T-shirt</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('White Crop T-shirt', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop T-shirt Black.png">
+        <h4>Black Crop T-shirt</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Black Crop T-shirt', 1800)">Add to Cart</button>
+    </div>
+
+   </section>
+
+   <section class="product-crop-top">
+         <h2>Women's Crop Top</h2>
+    </section>
+
+    <section class="products">
+
+    <div class="product-card">
+        <img src="png/Crop Top Black 01.png">
+        <h4>Black Crop Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Black Crop Top', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop Top White 01.png">
+        <h4>White Crop Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('White Crop Top', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop Top Olive Green 01.png">
+        <h4>Olive Green Crop Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Olive Green Crop Top', 1800)">Add to Cart</button>
+    </div>
+
+   </section>
+
+    <section class="products">
+
+    <div class="product-card">
+        <img src="png/Crop Top Black 02.png">
+        <h4>Black Crop Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Black Crop Top', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Model-05.png">
+        <h4>White Crop Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('White Crop Top', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop Top Olive Green 02.png">
+        <h4>Olive Green Crop Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Olive Green Crop Top', 1800)">Add to Cart</button>
+    </div>
+
+   </section>
+
+    <section class="products">
+
+    <div class="product-card">
+        <img src="png/Model-04.png">
+        <h4>Black Crop Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Black Crop Top', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Crop Top Olive Green 03.png">
+        <h4>Olive Green Crop Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('Olive Green Crop Top', 1800)">Add to Cart</button>
+    </div>
+
+   </section>
+
+
+
+	<footer class="footer">
+		<div class="footer-container">
+			<!--LEFT-->
+			<div class="footer-col">
+				<p>Privacy Policy</p>
+				<p>Terms & Conditions</p>
+				<a href="about.html">About Us</a>
+			</div>
+			<!--CENTER-->
+			<div>
+				<h3>GET IN TOUCH</h3>
+				<H2>VS Aura</H2>
+				<p>Be Unique. Be Bold. Be You.</p>
+			</div>
+			<!--Right-->
+			<div>
+				<p>+94 77 081 7925</p>
+				<p>info@vsaura.com</p>
+			</div>
+		</div>
+	</footer>
+
+         <!--CART PANEL-->
+         <div class="cart-panel" id="cartPanel">
+                <h2>Your Cart</h2>
+
+                <div id="cartItems">
+                </div>
+
+                <h3 id="total">Total: Rs. 0</h3>
+                <div class="payment">
+                    <h4>Payment Method</h4>
+
+                      <select id="paymentMethod">
+                            <option>Cash on Delivery</option>
+                            <option>Credit Card</option>
+                            <option>Debit Card</option>
+                      </select>
+
+                    <button onclick="checkout()" class="checkout-btn">Checkout</button>
+                </div>
+
+                    <button onclick="clearCart()" class="clear-btn">Clear Cart</button>
+                    <button onclick="refreshCart()" class="refresh-btn">Refresh</button>
+                </div>
+
+<script>
+
+let cart=[];
+
+/* TOGGLE */
+function toggleSearch(){
+    document.querySelector(".search-container").classList.toggle("active");
+}
+
+function toggleCart(){
+    document.getElementById("cartPanel").classList.toggle("active");
+}
+
+/* ADD TO CART */
+function addToCart(name,price){
+
+    let found = cart.find(item=>item.name===name);
+
+    if(found){
+        found.qty++;
+    }else{
+        cart.push({name,price,qty:1});
+    }
+
+    updateCart();
+}
+
+/* UPDATE CART */
+function updateCart(){
+
+    let cartItems=document.getElementById("cartItems");
+    let totalDisplay=document.getElementById("total");
+
+    cartItems.innerHTML="";
+    let total=0;
+
+    cart.forEach((item,index)=>{
+
+        total += item.price * item.qty;
+
+        let div=document.createElement("div");
+
+        div.innerHTML=`
+        <p>${item.name}</p>
+        <p>Rs.${item.price}</p>
+
+        <button onclick="decrease(${index})">-</button>
+        ${item.qty}
+        <button onclick="increase(${index})">+</button>
+
+        <hr>
+        `;
+
+        cartItems.appendChild(div);
+    });
+
+    totalDisplay.innerText="Total: Rs. "+total;
+}
+
+/* QTY */
+function increase(i){
+    cart[i].qty++;
+    updateCart();
+}
+
+function decrease(i){
+    if(cart[i].qty>1){
+        cart[i].qty--;
+    }else{
+        cart.splice(i,1);
+    }
+    updateCart();
+}
+
+/* CLEAR */
+function clearCart(){
+    cart=[];
+    updateCart();
+}
+
+/* CHECKOUT */
+function checkout(){
+
+    if(cart.length===0){
+        alert("Cart empty!");
+        return;
+    }
+
+    let method=document.getElementById("paymentMethod").value;
+
+    alert("Order placed using "+method+" ✅");
+
+    cart=[];
+    updateCart();
+}
+
+/* SEARCH */
+document.getElementById("searchInput").addEventListener("keyup",function(){
+
+    let value=this.value.toLowerCase();
+    let products=document.querySelectorAll(".product-card");
+
+    products.forEach(p=>{
+        let name=p.querySelector("h4").innerText.toLowerCase();
+
+        if(name.includes(value)){
+            p.style.display="block";
+        }else{
+            p.style.display="none";
+        }
+    });
+
+});
+
+</script>
+
+</body>
+</html>

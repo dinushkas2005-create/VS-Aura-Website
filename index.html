@@ -1,0 +1,307 @@
+<html>
+	<head>
+		<meta charset = "UTF-8">
+			<title> VS Aura </title>
+		<link rel = "stylesheet" type="text/css" href="style.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	</head>
+
+	<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<img src="PNG/Secondary Logo PNG.png" id="logoimg">
+			</div>
+			<div id="navigationbar">
+				<nav id="nav">
+					<a href="index.html">Home</a>
+					<a href="t-shirt.html">T-Shirt's</a>
+					<a href="Merchandise.html">Merchandise</a>
+					<a href="crop_tshirts.html">Crop T-shirt's</a>
+				        <a href="about.html">About Us</a>
+					<a href="login.html">Login</a>
+				</nav>
+                                <div class="nav-icons">
+                                     <div class="search-container">
+                                          <i class="fas fa-search" onclick="toggleSearch()"></i>
+                                          <input type="text" id="searchInput" placeholder="Search...">
+                                     </div>
+
+                                     <i class="fas fa-shopping-cart" onclick="toggleCart()"></i>
+                                     <a href="login.html"><i class="fas fa-user"></i></a>
+                                </div>     
+			</div>
+                </div>
+	</header>
+
+	<section class="vs">
+        <!--VIDEO BACKGROUND-->
+                <video autoplay muted loop class="bg-video">
+                     <source src="video/bg.mp4" type="video/mp4">
+                </video>
+	<!--Left-->
+			<div class="vs-text">
+				<div id="text1">
+					<p class="tag">New Arrival's</p>
+				</div>
+				<div id="text2">
+					<h1>VS Aura</h1>
+				</div>
+				<div id="text3">
+					<p class="desc">Elevate with VS</p>
+				</div>
+				<a href="shop.html"  class="btn">Shop Now</a>
+			</div>
+
+	<!--Right Image-->
+		<div class="vs-images">
+		<div class="card card-left">
+			<img src="png/model-01.png">
+		</div>
+
+		<div class="card card-right">
+			<img src="png/model-2.png">
+                </div>
+
+                <div class="card card-center">
+                        <img src="png/model-03.png">
+                </div>                
+	    
+		</div>
+
+       <!--NICKNAME-->
+                <div class="vs-nickname">
+                     <p>LEVEL UP YOUR LOOK WITH VS
+                     </p>
+                </div>
+	</section>
+
+	<section class="description">
+		<h2>STYLE WITHOUT LIMITS</h2>
+			<p>
+				Break the rules. Redefine your look. VS Aura brings fearless fashion made for individuals who stand out. 
+			</p>
+	</section>
+
+	<section class="latest">
+		<h3>JUST DROPPED</h3>
+	</section>
+
+        <section class="products">
+
+    <div class="product-card">
+        <img src="png/Model-2.png">
+        <h4>Black Oversized Tee</h4>
+        <p>Rs. 2500</p>
+        <button onclick="addToCart('Black Oversized Tee', 2500)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Model-01.png">
+        <h4>White Oversize Tee</h4>
+        <p>Rs. 2500</p>
+        <button onclick="addToCart('White Oversized Tee', 2500)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Model-04.png">
+        <h4>One Shoulder Crop Black Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('One Shoulder Crop Black Top', 1800)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="png/Model-05.png">
+        <h4>One Shoulder Crop White Top</h4>
+        <p>Rs. 1800</p>
+        <button onclick="addToCart('One Shoulder Crop White Top', 1800)">Add to Cart</button>
+    </div>
+
+</section>
+
+	<footer class="footer">
+		<div class="footer-container">
+			<!--LEFT-->
+			<div class="footer-col">
+				<p>Privacy Policy</p>
+				<p>Terms & Conditions</p>
+				<a href="about.html">About Us</a>
+			</div>
+			<!--CENTER-->
+			<div>
+				<h3>GET IN TOUCH</h3>
+				<H2>VS Aura</H2>
+				<p>Be Unique. Be Bold. Be You.</p>
+			</div>
+			<!--Right-->
+			<div>
+				<p>+94 77 081 7925</p>
+				<p>info@vsaura.com</p>
+			</div>
+		</div>
+	</footer>
+
+         <!--CART PANEL-->
+         <div class="cart-panel" id="cartPanel">
+                <h2>Your Cart</h2>
+
+                <div id="cartItems">
+                </div>
+
+                <h3 id="total">Total: Rs. 0</h3>
+                <div class="payment">
+                    <h4>Payment Method</h4>
+
+                      <select id="paymentMethod">
+                            <option>Cash on Delivery</option>
+                            <option>Credit Card</option>
+                            <option>Debit Card</option>
+                      </select>
+
+                    <button onclick="checkout()" class="checkout-btn">Checkout</button>
+                </div>
+
+                    <button onclick="clearCart()" class="clear-btn">Clear Cart</button>
+                    <button onclick="refreshCart()" class="refresh-btn">Refresh</button>
+                </div>
+
+<!-- SCRIPT -->
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+/* TOGGLE */
+function toggleSearch(){
+    document.querySelector(".search-container").classList.toggle("active");
+}
+
+function toggleCart(){
+    document.getElementById("cartPanel").classList.toggle("active");
+}
+
+/* ADD */
+function addToCart(name,price){
+
+    let found = cart.find(item=>item.name===name);
+
+    if(found){
+        found.qty++;
+    }else{
+        cart.push({name,price,qty:1});
+    }
+
+    saveCart();
+    updateCart();
+}
+
+/* UPDATE */
+function updateCart(){
+
+    let cartItems=document.getElementById("cartItems");
+    let totalDisplay=document.getElementById("total");
+
+    cartItems.innerHTML="";
+    let total=0;
+
+    cart.forEach((item,index)=>{
+
+        total += item.price * item.qty;
+
+        let div=document.createElement("div");
+
+        div.innerHTML=`
+        <p>${item.name}</p>
+        <p>Rs.${item.price}</p>
+
+        <button onclick="decrease(${index})">-</button>
+        ${item.qty}
+        <button onclick="increase(${index})">+</button>
+
+        <hr>
+        `;
+
+        cartItems.appendChild(div);
+    });
+
+    totalDisplay.innerText="Total: Rs. "+total;
+}
+
+/* QTY */
+function increase(i){
+    cart[i].qty++;
+    saveCart();
+    updateCart();
+}
+
+function decrease(i){
+    if(cart[i].qty>1){
+        cart[i].qty--;
+    }else{
+        cart.splice(i,1);
+    }
+    saveCart();
+    updateCart();
+}
+
+/* CLEAR */
+function clearCart(){
+    cart=[];
+    saveCart();
+    updateCart();
+}
+
+/* CHECKOUT */
+function checkout(){
+
+    if(cart.length===0){
+        alert("Cart empty!");
+        return;
+    }
+
+    let method=document.getElementById("paymentMethod").value;
+
+    alert("Order placed using "+method+" ✅");
+
+    cart=[];
+    saveCart();
+    updateCart();
+}
+
+/* SAVE */
+function saveCart(){
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+/* SEARCH */
+document.getElementById("searchInput").addEventListener("keyup",function(){
+
+    let value=this.value.toLowerCase();
+    let products=document.querySelectorAll(".product-card");
+
+    products.forEach(p=>{
+        let name=p.querySelector("h4").innerText.toLowerCase();
+
+        if(name.includes(value)){
+            p.style.display="block";
+        }else{
+            p.style.display="none";
+        }
+    });
+
+});
+
+/* LOAD */
+updateCart();
+
+</script>
+
+</body>
+</html>
+
+</section>
+
+</body>
+</html>
+</body>
+</html>
